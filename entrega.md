@@ -6,7 +6,7 @@
 - **Repositorio de código (GitHub):** https://github.com/allisonloangorayo-sudo/defiende-el-servidor
 - **Commit final de la entrega:** el último commit de `main` (se informa completo en el mensaje de entrega; `git rev-parse HEAD`).
 - **Repositorio de modelos (Hugging Face):** https://huggingface.co/allisonloango/defiende-el-servidor-unsw-nb15
-- **Almacenamiento DVC:** https://huggingface.co/datasets/allisonloango/defiende-el-servidor-dvc · revisión `PENDIENTE (se completa al ejecutar scripts/publicar.sh)`
+- **Almacenamiento DVC:** https://huggingface.co/datasets/allisonloango/defiende-el-servidor-dvc · revisión `a93baca2bcf5601887d764dd10960f2f70a591f1`
   - Remote `hf` en `.dvc/config` (HTTP de solo lectura): `https://huggingface.co/datasets/allisonloango/defiende-el-servidor-dvc/resolve/main`
   - Acceso: repositorios públicos; `dvc pull` no requiere credenciales.
 
@@ -18,7 +18,7 @@
 - Commit con la config de la versión: `8ee1114479ae66dd2a346faedff632073136a23f` · tag Git `v1` → `af4cb0beb3a823ad404397a9eb193b8aa3417a96`
 - Datos DVC: original `data/raw.dvc` md5 `fe93051ae209ffb0128a31e7a478c009.dir` (commit `87763e7cec12e97865eeaabe95c46ab539c710a3`); preparados `data/prepared.dvc` md5 `5ae30cc8b0b02e4fe567608df0b93638.dir` (commit `162eec5de623834b569fbd8854425e9fdfc72ff3`)
 - Experimento y run de MLflow: E1 · `48de31fc1e57432194b41f4bc9e4a3a5`
-- Hugging Face: https://huggingface.co/allisonloango/defiende-el-servidor-unsw-nb15 · revisión `PENDIENTE (se completa al ejecutar scripts/publicar.sh)` (tag `v1`)
+- Hugging Face: https://huggingface.co/allisonloango/defiende-el-servidor-unsw-nb15 · revisión `403d252959457cb15cb470e83262d4734dabda33` (tag `v1`)
 - SHA-256 de `model.joblib`: `36648d8096669151f881ffa0d00f32b07daab389cd8927b0898d4fe81a33a7f3`
 - Umbral: `0.5` (ataque si `score_attack >= umbral`)
 
@@ -28,11 +28,11 @@
 - Commit con la config de la versión: `283a9eb680cdee4d4f1bbe3c35e3d38942601428` · tag Git `v2` → `693d2ef5c21e0452f969f2e29471fe84509980bb`
 - Datos DVC: original `data/raw.dvc` md5 `fe93051ae209ffb0128a31e7a478c009.dir` (commit `87763e7cec12e97865eeaabe95c46ab539c710a3`); preparados `data/prepared.dvc` md5 `5ae30cc8b0b02e4fe567608df0b93638.dir` (commit `162eec5de623834b569fbd8854425e9fdfc72ff3`)
 - Experimento y run de MLflow: E4 · `68d9aeb74e0d402d9209c10ca1a735da`
-- Hugging Face: https://huggingface.co/allisonloango/defiende-el-servidor-unsw-nb15 · revisión `PENDIENTE (se completa al ejecutar scripts/publicar.sh)` (tag `v2`)
+- Hugging Face: https://huggingface.co/allisonloango/defiende-el-servidor-unsw-nb15 · revisión `c95111ff150a57f2666c77f0d4b220aaec801ada` (tag `v2`)
 - SHA-256 de `model.joblib`: `23c42b34e7729858b5a809fc7dde153d2ca108179db7ad3d745297ddca125671`
 - Umbral: `0.66` (ataque si `score_attack >= umbral`)
 
-La model card de v2 se actualizó después de test en la revisión `PENDIENTE (se completa al ejecutar scripts/publicar.sh)` (tag `v2-test`);
+La model card de v2 se actualizó después de test en la revisión `c274d191303cba18bda196fe9618e1861106e463` (tag `v2-test`);
 esa revisión solo cambia `README.md` y conserva el mismo `model.joblib` (SHA-256 verificado al publicar).
 
 ## Experimentos (validación, misma partición)

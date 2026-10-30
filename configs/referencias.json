@@ -1,0 +1,23 @@
+{
+  "dvc_remote": {
+    "url": "https://huggingface.co/datasets/allisonloango/defiende-el-servidor-dvc/resolve/main",
+    "hf_dataset_repo": "https://huggingface.co/datasets/allisonloango/defiende-el-servidor-dvc",
+    "hf_revision_sha": "a93baca2bcf5601887d764dd10960f2f70a591f1"
+  },
+  "hf_model_repo": "https://huggingface.co/allisonloango/defiende-el-servidor-unsw-nb15",
+  "v1": {
+    "hf_revision_sha": "403d252959457cb15cb470e83262d4734dabda33",
+    "sha256_model_joblib": "36648d8096669151f881ffa0d00f32b07daab389cd8927b0898d4fe81a33a7f3",
+    "umbral": 0.5,
+    "mlflow_run_id": "48de31fc1e57432194b41f4bc9e4a3a5",
+    "git_tag": "v1"
+  },
+  "v2": {
+    "hf_revision_sha": "c95111ff150a57f2666c77f0d4b220aaec801ada",
+    "sha256_model_joblib": "23c42b34e7729858b5a809fc7dde153d2ca108179db7ad3d745297ddca125671",
+    "umbral": 0.66,
+    "mlflow_run_id": "68d9aeb74e0d402d9209c10ca1a735da",
+    "git_tag": "v2",
+    "hf_revision_card_test_sha": "c274d191303cba18bda196fe9618e1861106e463"
+  }
+}

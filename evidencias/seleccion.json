@@ -25,8 +25,9 @@
   },
   "hugging_face": {
     "repo": "allisonloango/defiende-el-servidor-unsw-nb15",
-    "revision_v2_sha": "PENDIENTE_PUBLICACION",
-    "nota": "Se completa con scripts/publicar.sh; el artefacto se identifica por sha256_model_joblib."
+    "revision_v2_sha": "c95111ff150a57f2666c77f0d4b220aaec801ada",
+    "tag": "v2",
+    "nota": "Completado tras la publicación; el artefacto es el mismo (sha256_model_joblib)."
   },
   "metricas_validacion": {
     "umbral": 0.66,
