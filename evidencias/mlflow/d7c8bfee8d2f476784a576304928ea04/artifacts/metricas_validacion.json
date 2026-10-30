@@ -1,0 +1,41 @@
+{
+  "experimento": "E3",
+  "run_id": "d7c8bfee8d2f476784a576304928ea04",
+  "git_commit": "0bf39dff1c2f7858f905ee8213512ce872f6b671",
+  "sha256_model_joblib": "67b54d00b19576ab9735ecc0511e649b35d88f1c1c05c27a152415895ec1ce8e",
+  "validacion_umbral_050": {
+    "umbral": 0.5,
+    "matriz_confusion": {
+      "tn": 9917,
+      "fp": 1283,
+      "fn": 543,
+      "tp": 23324
+    },
+    "recall_ataque": 0.9772489211044538,
+    "precision_ataque": 0.9478603649368066,
+    "fpr": 0.11455357142857144,
+    "macro_f1": 0.9390137294951046,
+    "f1_ataque": 0.9623303214094153,
+    "f1_normal": 0.9156971375807941,
+    "accuracy": 0.9479282516325891,
+    "denominadores_cero": []
+  },
+  "validacion_umbral_operativo": {
+    "umbral": 0.7,
+    "matriz_confusion": {
+      "tn": 10657,
+      "fp": 543,
+      "fn": 1612,
+      "tp": 22255
+    },
+    "recall_ataque": 0.9324590438681024,
+    "precision_ataque": 0.9761821212387052,
+    "fpr": 0.048482142857142856,
+    "macro_f1": 0.9309982615337558,
+    "f1_ataque": 0.9538197792778313,
+    "f1_normal": 0.90817674378968,
+    "accuracy": 0.9385462115379132,
+    "denominadores_cero": [],
+    "cumple_fpr_maximo": true
+  }
+}

@@ -1,0 +1,20 @@
+id: E2
+nombre: rl_log1p
+familia: regresion_logistica
+semilla: 42
+hipotesis: >
+  Si el problema de E1 es la asimetría de las variables de volumen, aplicar log1p antes
+  de estandarizar debería volver más lineal la relación con el log-odds de ataque y
+  reducir la FPR sin perder recall. Agrupar categorías raras de proto (min_frequency=20)
+  evita coeficientes inestables para protocolos con pocas filas.
+cambio: Respecto a E1 cambia solo el preprocesamiento (log1p + categorías infrecuentes agrupadas).
+preprocesamiento:
+  numericas: log1p_estandar
+  categoricas: onehot
+  onehot_min_frecuencia: 20
+modelo:
+  clase: LogisticRegression
+  parametros:
+    C: 1.0
+    max_iter: 3000
+    solver: lbfgs
