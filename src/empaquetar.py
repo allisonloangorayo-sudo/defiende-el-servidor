@@ -79,7 +79,7 @@ if __name__ == "__main__":
     entrada = pd.read_csv(sys.argv[1])
     salida = predecir(entrada, modelo, cfg)
     salida.to_csv(sys.argv[2] if len(sys.argv) > 2 else sys.stdout, index=False,
-                  float_format="%.10f")
+                  float_format="%.17g")
 '''
 
 
