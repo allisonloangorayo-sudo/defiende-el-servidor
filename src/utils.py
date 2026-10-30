@@ -40,13 +40,24 @@ def columnas_numericas(df: pd.DataFrame) -> list[str]:
     return [c for c in columnas_predictoras(df) if c not in CATEGORICAS]
 
 
-def git_commit() -> str:
-    """Commit completo de HEAD; falla si hay cambios sin confirmar en código/config."""
+def git_commit(*rutas_requeridas: str) -> str:
+    """Commit completo de HEAD.
+
+    Falla si hay cambios sin confirmar en archivos versionados de src/, configs/ o
+    requirements.txt, o si alguna ruta requerida (p. ej. la config del experimento)
+    no está confirmada en Git. Así cada run queda ligado a código real del historial.
+    """
     sha = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=RAIZ, text=True).strip()
     sucio = subprocess.check_output(
-        ["git", "status", "--porcelain", "--", "src", "configs", "requirements.txt"],
+        ["git", "status", "--porcelain", "--untracked-files=no", "--",
+         "src", "configs", "requirements.txt"],
         cwd=RAIZ, text=True,
     ).strip()
+    for ruta in rutas_requeridas:
+        if subprocess.run(["git", "ls-files", "--error-unmatch", ruta], cwd=RAIZ,
+                          capture_output=True).returncode != 0:
+            sucio += f"\n?? {ruta} (no está confirmado en Git)"
+    sucio = sucio.strip()
     if sucio:
         raise RuntimeError(
             "Hay cambios sin confirmar en src/, configs/ o requirements.txt. "

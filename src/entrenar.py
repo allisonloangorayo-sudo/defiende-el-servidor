@@ -53,7 +53,7 @@ def main(ruta_cfg: str) -> None:
     with open(ruta_cfg) as f:
         cfg = yaml.safe_load(f)
     regla = cargar_regla()
-    commit = git_commit()
+    commit = git_commit(ruta_cfg)
     np.random.seed(cfg["semilla"])
 
     train = pd.read_csv(DATA_PREP / "train.csv")
