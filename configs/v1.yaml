@@ -1,0 +1,15 @@
+# Versión 1 del modelo: primera solución funcional (semana 1 del plan).
+version: v1
+titulo: referencia regresión logística (umbral 0,50)
+experimento: E1
+mlflow_run_id: 48de31fc1e57432194b41f4bc9e4a3a5
+umbral: 0.5
+razon: >
+  Primera solución completa y reproducible: pipeline de E1 (one-hot + estandarización +
+  regresión logística) con el umbral convencional 0,5, antes de explorar más configuraciones.
+proposito: >
+  Línea base interpretable para separar conexiones normales de ataques en UNSW-NB15.
+  Sirve como punto de comparación para la versión 2 y como primera solución funcional.
+hf_repo: allisonloango/defiende-el-servidor-unsw-nb15
+github_repo: https://github.com/allisonloangorayo-sudo/defiende-el-servidor
+dvc_store: dataset de Hugging Face `allisonloango/defiende-el-servidor-dvc` (remote DVC `hf`, HTTP de solo lectura)

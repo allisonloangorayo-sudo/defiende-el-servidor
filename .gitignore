@@ -7,9 +7,9 @@ __pycache__/
 # Tracking local de MLflow (la exportación consultable está en evidencias/mlflow/)
 /mlruns/
 /mlflow.db
-# Paquetes de modelos generados (se publican en Hugging Face)
-/models/hf/
 # Salidas temporales
 /build/
 *.zip
 .env
+# Binarios de modelos: se publican en Hugging Face, no en Git
+/models/*/model.joblib
