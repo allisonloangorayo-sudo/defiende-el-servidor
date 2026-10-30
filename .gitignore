@@ -6,6 +6,7 @@ __pycache__/
 .DS_Store
 # Tracking local de MLflow (la exportación consultable está en evidencias/mlflow/)
 /mlruns/
+/mlflow.db
 # Paquetes de modelos generados (se publican en Hugging Face)
 /models/hf/
 # Salidas temporales

@@ -37,5 +37,7 @@ N_FOLDS_SPLIT = 5   # StratifiedGroupKFold: 1 de 5 grupos de pliegues = 20 % val
 
 # --- Evidencias ----------------------------------------------------------------
 EVID = RAIZ / "evidencias"
-MLFLOW_URI = (RAIZ / "mlruns").as_uri()
+# Backend local SQLite (el file store de MLflow 3 está en mantenimiento) y artefactos en mlruns/.
+MLFLOW_URI = f"sqlite:///{(RAIZ / 'mlflow.db').as_posix()}"
+MLFLOW_ARTEFACTOS = (RAIZ / "mlruns").as_uri()
 EXPERIMENTO_MLFLOW = "defiende-el-servidor"

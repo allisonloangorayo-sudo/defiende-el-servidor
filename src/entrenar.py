@@ -22,7 +22,8 @@ import numpy as np
 import pandas as pd
 import yaml
 
-from src.config import DATA_PREP, EXPERIMENTO_MLFLOW, MLFLOW_URI, OBJETIVO, RAIZ
+from src.config import (DATA_PREP, EXPERIMENTO_MLFLOW, MLFLOW_ARTEFACTOS, MLFLOW_URI, OBJETIVO,
+                        RAIZ)
 from src.metricas import evaluar
 from src.modelos import construir_pipeline
 from src.utils import (columnas_numericas, columnas_predictoras, dvc_md5, git_commit,
@@ -73,6 +74,8 @@ def main(ruta_cfg: str) -> None:
     m_oper, barrido = umbral_operativo(y_val, score_val, regla)
 
     mlflow.set_tracking_uri(MLFLOW_URI)
+    if mlflow.get_experiment_by_name(EXPERIMENTO_MLFLOW) is None:
+        mlflow.create_experiment(EXPERIMENTO_MLFLOW, artifact_location=MLFLOW_ARTEFACTOS)
     mlflow.set_experiment(EXPERIMENTO_MLFLOW)
     with mlflow.start_run(run_name=f"{cfg['id']}_{cfg['nombre']}") as run, \
             tempfile.TemporaryDirectory() as tmp:
