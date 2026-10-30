@@ -1,0 +1,18 @@
+{
+  "commit_recuperado": "28bc692a46a0b695a3b964850792e45becf8030c",
+  "entrada": {
+    "archivo": "evidencias/recuperacion/entrada_20_val.csv",
+    "sha256": "6a23eb6877cbc5a646fa8cd3031b2b50f95bf479d1641d7be7f672aae50d0201"
+  },
+  "salidas": {
+    "predicciones_recuperadas_v1.csv": "647f2f29ddefcc330e8473605d3b954103ac46590a29c782a45e5eafda562222",
+    "predicciones_recuperadas_v2.csv": "2cd5ec820cb54caecde83555be43ca7e62cf746ee8186152b12f44416255d6f9"
+  },
+  "originales": {
+    "predicciones_originales_v1.csv": "5ed79ef594e644d7f26ab15c478fbfcc4a6ef074799a1f1c2ea8c404153595b5",
+    "predicciones_originales_v2.csv": "2cd5ec820cb54caecde83555be43ca7e62cf746ee8186152b12f44416255d6f9"
+  },
+  "resultado_v1": "OK",
+  "resultado_v2": "OK",
+  "resultado_global": "OK"
+}

@@ -1,0 +1,35 @@
+{
+  "archivos": [
+    {
+      "archivo": "data/raw/UNSW_NB15_training-set.csv",
+      "esperado": "bec7dd5ec88dc2a0ccc7a07879d338395ed7421750f675fd0339e07dfe0648fa",
+      "obtenido": "bec7dd5ec88dc2a0ccc7a07879d338395ed7421750f675fd0339e07dfe0648fa",
+      "coincide": true
+    },
+    {
+      "archivo": "data/raw/UNSW_NB15_testing-set.csv",
+      "esperado": "734fe6642edf758f7c94d7d9149426b49d202fe8e7bf0bef47392489c3c0a559",
+      "obtenido": "734fe6642edf758f7c94d7d9149426b49d202fe8e7bf0bef47392489c3c0a559",
+      "coincide": true
+    },
+    {
+      "archivo": "data/prepared/train.csv",
+      "esperado": "3a0585635559684573704005c2e443d9f00279fff74c4ab95d7ed11b6cfc7a74",
+      "obtenido": "3a0585635559684573704005c2e443d9f00279fff74c4ab95d7ed11b6cfc7a74",
+      "coincide": true
+    },
+    {
+      "archivo": "data/prepared/val.csv",
+      "esperado": "d9d2294ed419a69beccac94a153a5799455e79bf43f94fe6c9d7d5846b2c93ee",
+      "obtenido": "d9d2294ed419a69beccac94a153a5799455e79bf43f94fe6c9d7d5846b2c93ee",
+      "coincide": true
+    },
+    {
+      "archivo": "data/prepared/test.csv",
+      "esperado": "4119af2921bb64114041d427b88f50aeca16d0e1be3bbe8e11b46ccc8f88d19f",
+      "obtenido": "4119af2921bb64114041d427b88f50aeca16d0e1be3bbe8e11b46ccc8f88d19f",
+      "coincide": true
+    }
+  ],
+  "resultado": "OK"
+}
