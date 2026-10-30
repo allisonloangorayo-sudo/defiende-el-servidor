@@ -1,0 +1,15 @@
+# Regla de decisión fijada ANTES de ver resultados. Se aplica solo sobre validación.
+#
+# Contexto: un SOC (equipo de seguridad) atiende alertas. Un ataque no detectado (FN)
+# es el error más costoso, pero cada falso positivo consume tiempo de analista y, en
+# exceso, provoca fatiga de alertas. Por eso se fija un presupuesto de falsas alarmas
+# y, dentro de él, se maximiza la detección de ataques.
+clase_positiva: 1            # 1 = ataque
+fpr_maximo: 0.05             # como máximo 5 de cada 100 conexiones normales generan alerta
+objetivo: recall_ataque      # maximizar recall de ataques sujeto a fpr <= fpr_maximo
+desempate: macro_f1          # si dos opciones empatan en recall, gana mayor macro-F1
+umbral_por_defecto: 0.5      # umbral de referencia (v1 y tabla comparativa)
+rejilla_umbrales:            # candidatos evaluados en validación
+  inicio: 0.01
+  fin: 0.99
+  paso: 0.01

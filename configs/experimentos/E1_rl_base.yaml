@@ -1,0 +1,20 @@
+id: E1
+nombre: rl_base
+familia: regresion_logistica
+semilla: 42
+hipotesis: >
+  Una regresión logística con one-hot y estandarización es una referencia sencilla e
+  interpretable. Esperamos recall de ataque alto pero una FPR elevada, porque las
+  variables de volumen (bytes, cargas, paquetes) tienen colas muy largas y una frontera
+  lineal sobre su escala original separa mal las conexiones normales.
+cambio: Referencia (sin cambio previo).
+preprocesamiento:
+  numericas: estandar
+  categoricas: onehot
+  onehot_min_frecuencia: null
+modelo:
+  clase: LogisticRegression
+  parametros:
+    C: 1.0
+    max_iter: 3000
+    solver: lbfgs
