@@ -1,0 +1,19 @@
+id: E3
+nombre: arbol_decision
+familia: arboles
+semilla: 42
+hipotesis: >
+  Los ataques de UNSW-NB15 se distinguen por reglas con umbrales e interacciones
+  (p. ej. TTL junto con estado y servicio). Un árbol de decisión, invariante a escalas
+  monótonas, debería superar a la regresión logística en FPR y macro-F1. Limitamos la
+  profundidad y el tamaño de hoja para controlar el sobreajuste a entradas duplicadas.
+cambio: Cambia la familia del modelo (árbol) y la codificación (ordinal).
+preprocesamiento:
+  numericas: ninguno
+  categoricas: ordinal
+modelo:
+  clase: DecisionTreeClassifier
+  parametros:
+    max_depth: 12
+    min_samples_leaf: 20
+    criterion: gini
