@@ -1,0 +1,38 @@
+# Versión 2: generada por src/seleccionar.py a partir de validación (no editar a mano).
+version: v2
+titulo: gradient boosting (E4) con umbral 0,66 elegido en validación
+experimento: E4
+mlflow_run_id: 68d9aeb74e0d402d9209c10ca1a735da
+umbral: 0.66
+razon: Cambio de modelo (regresión logística -> HistGradientBoosting, preprocesamiento ordinal sin escalado)
+  y de umbral (0,50 -> 0,66). Aplicando la regla fijada en configs/seleccion.yaml (máximo recall de ataque
+  con FPR <= 5 % en validación), E4 obtiene el mayor recall entre las cuatro configuraciones.
+proposito: 'Versión revisada para un equipo de seguridad con presupuesto de falsas alarmas: maximiza la
+  detección de ataques manteniendo la tasa de falsos positivos en validación por debajo de 5 %.'
+comparacion: '## Comparación con v1 (validación)
+
+
+  | | v1 (E1, u=0,50) | v2 (E4, u=0,66) | Cambio |
+
+  |---|---|---|---|
+
+  | Recall de ataque | 0.9876 | 0.9532 | -3.4 pp |
+
+  | Precision de ataque | 0.9230 | 0.9769 | +5.4 pp |
+
+  | FPR | 0.1755 | 0.0480 | -12.8 pp |
+
+  | Macro-F1 | 0.9225 | 0.9464 | +2.4 pp |
+
+  | Falsos positivos | 1966 | 538 | |
+
+  | Ataques no detectados (FN) | 296 | 1117 | |
+
+
+  **Qué mejora:** las falsas alarmas bajan de 1966 a 538 y la precision y el macro-F1 suben. **Qué empeora:**
+  el recall baja 3.4 pp: se aceptan 821 ataques no detectados más (sobre todo Fuzzers) a cambio de respetar
+  el presupuesto de FPR <= 5 %.'
+hf_repo: allisonloango/defiende-el-servidor-unsw-nb15
+github_repo: https://github.com/allisonloangorayo-sudo/defiende-el-servidor
+dvc_store: dataset de Hugging Face `allisonloango/defiende-el-servidor-dvc` (remote DVC `hf`, HTTP de
+  solo lectura)

@@ -1,0 +1,98 @@
+{
+  "version_elegida": "v2",
+  "fecha_decision_utc": "2026-10-30T16:53:09Z",
+  "regla": {
+    "clase_positiva": 1,
+    "fpr_maximo": 0.05,
+    "objetivo": "recall_ataque",
+    "desempate": "macro_f1",
+    "umbral_por_defecto": 0.5,
+    "rejilla_umbrales": {
+      "inicio": 0.01,
+      "fin": 0.99,
+      "paso": 0.01
+    }
+  },
+  "experimento": "E4",
+  "mlflow_run_id": "68d9aeb74e0d402d9209c10ca1a735da",
+  "estimador": "HistGradientBoostingClassifier",
+  "umbral": 0.66,
+  "sha256_model_joblib": "23c42b34e7729858b5a809fc7dde153d2ca108179db7ad3d745297ddca125671",
+  "git_commit_entrenamiento": "0bf39dff1c2f7858f905ee8213512ce872f6b671",
+  "dvc": {
+    "data/raw.dvc": "fe93051ae209ffb0128a31e7a478c009.dir",
+    "data/prepared.dvc": "5ae30cc8b0b02e4fe567608df0b93638.dir"
+  },
+  "hugging_face": {
+    "repo": "allisonloango/defiende-el-servidor-unsw-nb15",
+    "revision_v2_sha": "PENDIENTE_PUBLICACION",
+    "nota": "Se completa con scripts/publicar.sh; el artefacto se identifica por sha256_model_joblib."
+  },
+  "metricas_validacion": {
+    "umbral": 0.66,
+    "matriz_confusion": {
+      "tn": 10662,
+      "fp": 538,
+      "fn": 1117,
+      "tp": 22750
+    },
+    "recall_ataque": 0.9531989776679096,
+    "precision_ataque": 0.9768979732050842,
+    "fpr": 0.048035714285714286,
+    "macro_f1": 0.9464403491611462,
+    "f1_ataque": 0.9649029795355741,
+    "f1_normal": 0.9279777187867183,
+    "accuracy": 0.952804631134685,
+    "denominadores_cero": []
+  },
+  "metricas_validacion_v1": {
+    "umbral": 0.5,
+    "matriz_confusion": {
+      "tn": 9234,
+      "fp": 1966,
+      "fn": 296,
+      "tp": 23571
+    },
+    "recall_ataque": 0.9875979385762769,
+    "precision_ataque": 0.9230136664447665,
+    "fpr": 0.1755357142857143,
+    "macro_f1": 0.9225485061235279,
+    "f1_ataque": 0.9542142336652902,
+    "f1_normal": 0.8908827785817656,
+    "accuracy": 0.9354949097442039,
+    "denominadores_cero": []
+  },
+  "candidatos": [
+    {
+      "experimento_id": "E1",
+      "umbral_oper": 0.78,
+      "recall_ataque_oper": 0.89496,
+      "fpr_oper": 0.049643,
+      "macro_f1_oper": 0.903656
+    },
+    {
+      "experimento_id": "E2",
+      "umbral_oper": 0.78,
+      "recall_ataque_oper": 0.913186,
+      "fpr_oper": 0.049107,
+      "macro_f1_oper": 0.916828
+    },
+    {
+      "experimento_id": "E3",
+      "umbral_oper": 0.7,
+      "recall_ataque_oper": 0.932459,
+      "fpr_oper": 0.048482,
+      "macro_f1_oper": 0.930998
+    },
+    {
+      "experimento_id": "E4",
+      "umbral_oper": 0.66,
+      "recall_ataque_oper": 0.953199,
+      "fpr_oper": 0.048036,
+      "macro_f1_oper": 0.94644
+    }
+  ],
+  "razon": "Ataque no detectado (FN) es el error más costoso; las falsas alarmas tienen un presupuesto (FPR <= 5%). Entre los puntos que cumplen el presupuesto, E4 con umbral 0.66 maximiza el recall (0.9532) y además tiene el mayor macro-F1.",
+  "congelacion": "Este archivo y configs/v2.yaml se confirman en Git (tag v2) antes del commit que ejecuta src/evaluar_test.py. El modelo y el umbral no se modifican después de ver test.",
+  "test_usado_para_decidir": false
+}

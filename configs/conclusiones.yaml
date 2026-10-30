@@ -1,0 +1,17 @@
+# Interpretación de cada experimento en validación (escrita después de ver resultados de
+# validación y antes de evaluar test). Se copia a experimentos.csv y como tag en MLflow.
+E1: >
+  Hipótesis confirmada. Al umbral 0,50 detecta 98,8 % de los ataques pero alerta sobre
+  17,6 % de las conexiones normales (1.966 FP). Para respetar FPR <= 5 % el umbral sube a
+  0,78 y el recall cae a 89,5 %. Sirve como v1 y como referencia.
+E2: >
+  Hipótesis confirmada en parte. log1p reduce la FPR a 0,50 (17,6 % -> 13,6 %) y, con
+  FPR <= 5 %, sube el recall de 89,5 % a 91,3 %. La frontera lineal sigue limitada: los
+  Fuzzers (tráfico parecido al normal) se detectan solo al 54 %.
+E3: >
+  Hipótesis confirmada. Un árbol de profundidad 12 supera a ambas regresiones: con FPR <= 5 %
+  logra recall 93,3 % y macro-F1 0,931. Las reglas por umbrales capturan TTL/estado/servicio.
+E4: >
+  Hipótesis confirmada. El ensemble de boosting tiene la mejor curva recall-FPR: con
+  FPR = 4,8 % (umbral 0,66) detecta 95,3 % de los ataques y logra macro-F1 0,946. Su
+  error residual se concentra en Fuzzers (73 % detectados) y Analysis (89 %). Elegido para v2.
