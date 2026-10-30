@@ -1,0 +1,14 @@
+# Entornos y cachés
+.venv/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+# Tracking local de MLflow (la exportación consultable está en evidencias/mlflow/)
+/mlruns/
+# Paquetes de modelos generados (se publican en Hugging Face)
+/models/hf/
+# Salidas temporales
+/build/
+*.zip
+.env

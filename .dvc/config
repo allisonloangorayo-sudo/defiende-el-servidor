@@ -1,0 +1,5 @@
+[core]
+    autostage = true
+    remote = hf
+['remote "hf"']
+    url = https://huggingface.co/datasets/allisonloango/defiende-el-servidor-dvc/resolve/main

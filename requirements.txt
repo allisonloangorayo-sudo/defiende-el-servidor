@@ -1,0 +1,15 @@
+# Python 3.13 (probado con 3.13.18). Versiones fijadas: el artefacto model.joblib
+# debe cargarse con la misma versión de scikit-learn con la que se entrenó.
+numpy==2.5.3
+pandas==3.0.5
+scipy==1.18.1
+scikit-learn==1.9.1
+joblib==1.6.0
+threadpoolctl==3.7.0
+PyYAML==6.0.3
+mlflow==3.17.2
+dvc==3.67.1
+dvc-http==2.32.0
+huggingface_hub==2.4.0
+matplotlib==3.11.2
+reportlab==5.0.1
