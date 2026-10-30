@@ -152,7 +152,7 @@ def main() -> None:
     h = []
     h.append(Paragraph("Defiende el servidor", ST["titulo"]))
     h.append(Paragraph("Versionado de código, datos, experimentos y modelos · MLOps 2026-II · "
-                       "Universidad Externado de Colombia · Allison Loango · Grupo A · "
+                       "Universidad Externado de Colombia · Allison Loango y Kevin Nieto · Grupo A · "
                        "Docente: Julián Zuluaga · 30 de octubre de 2026", ST["sub"]))
     h.append(Spacer(1, 5))
     h.append(P(
@@ -356,13 +356,13 @@ def main() -> None:
         canvas.saveState()
         canvas.setFont("DV", 6.8)
         canvas.setFillColor(colors.HexColor(GRIS))
-        canvas.drawString(1.6 * cm, 1.0 * cm, "MLOps 2026-II · Defiende el servidor · Allison Loango · Grupo A")
+        canvas.drawString(1.6 * cm, 1.0 * cm, "MLOps 2026-II · Defiende el servidor · Allison Loango y Kevin Nieto · Grupo A")
         canvas.drawRightString(A4[0] - 1.6 * cm, 1.0 * cm, f"{doc.page}")
         canvas.restoreState()
 
     doc = SimpleDocTemplate(str(RAIZ / "informe.pdf"), pagesize=A4, leftMargin=1.6 * cm,
                             rightMargin=1.6 * cm, topMargin=1.4 * cm, bottomMargin=1.5 * cm,
-                            title="Defiende el servidor — informe", author="Allison Loango")
+                            title="Defiende el servidor — informe", author="Allison Loango, Kevin Nieto")
     doc.build(h, onFirstPage=pie, onLaterPages=pie)
     print("informe.pdf generado")
 

@@ -1,8 +1,8 @@
-# Entrega · MLOps — Defiende el servidor — Grupo A — Allison Loango
+# Entrega · MLOps — Defiende el servidor — Grupo A — Allison Loango y Kevin Nieto
 
 ## Integrantes y repositorio
 
-- **Integrante:** Allison Loango · Grupo A (entrega individual)
+- **Integrantes:** Allison Loango y Kevin Nieto · Grupo A (entrega en pareja)
 - **Repositorio de código (GitHub):** https://github.com/allisonloangorayo-sudo/defiende-el-servidor
 - **Commit final de la entrega:** el último commit de `main` (se informa completo en el mensaje de entrega; `git rev-parse HEAD`).
 - **Repositorio de modelos (Hugging Face):** https://huggingface.co/allisonloango/defiende-el-servidor-unsw-nb15
@@ -102,4 +102,4 @@ evaluación en test < 10 s. La prueba de recuperación registra su duración en 
 - **IA:** se usó Claude (Anthropic) como asistente para estructurar el proyecto, escribir el código y la documentación y ejecutar los experimentos. Los commits generados con asistencia llevan la línea `Co-Authored-By: Claude`. Verifiqué: huellas SHA-256 frente al anexo, ausencia de grupos compartidos entre train y val, que test no participó en la selección (orden de commits), coincidencia de hashes entre MLflow, `models/` y Hugging Face, recálculo de métricas desde `predicciones-test.csv` y la prueba de recuperación en entorno nuevo.
 - **Código externo:** solo bibliotecas listadas en `requirements.txt` (scikit-learn, pandas, MLflow, DVC, huggingface_hub, matplotlib, reportlab). No se adaptó código de terceros.
 - **Datos:** UNSW-NB15 (Moustafa & Slay, 2015), obtenido del mirror fijado indicado en el enunciado.
-- **Contribución:** entrega individual; Allison Loango es responsable de todas las decisiones y del contenido.
+- **Contribución:** entrega en pareja; Allison Loango y Kevin Nieto son responsables de las decisiones y del contenido.

@@ -37,8 +37,8 @@ REFS=configs/referencias.json
 cat <<EOF
 
 ================ Para el mensaje de entrega ================
-Asunto: MLOps — Defiende el servidor — Grupo A — Allison Loango
-Integrante: Allison Loango · Grupo A
+Asunto: MLOps — Defiende el servidor — Grupo A — Allison Loango y Kevin Nieto
+Integrantes: Allison Loango y Kevin Nieto · Grupo A
 Repositorio de código: https://github.com/allisonloangorayo-sudo/defiende-el-servidor
 Commit final: $FINAL
 Repositorio de modelos: $("$PY" -c "import json;print(json.load(open('$REFS'))['hf_model_repo'])")
