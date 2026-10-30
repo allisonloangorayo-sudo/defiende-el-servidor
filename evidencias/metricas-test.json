@@ -1,0 +1,90 @@
+{
+  "version": "v2",
+  "experimento": "E4",
+  "mlflow_run_id": "68d9aeb74e0d402d9209c10ca1a735da",
+  "sha256_model_joblib": "23c42b34e7729858b5a809fc7dde153d2ca108179db7ad3d745297ddca125671",
+  "hugging_face": {
+    "repo": "allisonloango/defiende-el-servidor-unsw-nb15",
+    "revision_v2_sha": "PENDIENTE_PUBLICACION",
+    "nota": "Se completa con scripts/publicar.sh; el artefacto se identifica por sha256_model_joblib."
+  },
+  "umbral": 0.66,
+  "regla_decision": "y_pred = 1 (ataque) si score_attack >= umbral; score_attack = predict_proba[:, 1]",
+  "clase_positiva": "1 = ataque",
+  "dataset": {
+    "archivo_original": "data/raw/UNSW_NB15_testing-set.csv",
+    "sha256_original": "734fe6642edf758f7c94d7d9149426b49d202fe8e7bf0bef47392489c3c0a559",
+    "archivo_preparado": "data/prepared/test.csv",
+    "sha256_preparado": "4119af2921bb64114041d427b88f50aeca16d0e1be3bbe8e11b46ccc8f88d19f"
+  },
+  "filas_evaluadas": 82332,
+  "filas_archivo_publicado": 82332,
+  "matriz_confusion": {
+    "tn": 30510,
+    "fp": 6490,
+    "fn": 1447,
+    "tp": 43885
+  },
+  "metricas": {
+    "recall_ataque": 0.9680799435277508,
+    "precision_ataque": 0.871166253101737,
+    "fpr": 0.17540540540540542,
+    "macro_f1": 0.9009845459339474,
+    "f1_ataque": 0.9170698068061898,
+    "f1_normal": 0.8848992850617051,
+    "accuracy": 0.9035976291114026
+  },
+  "denominadores_cero": [],
+  "tasa_prediccion_ataque_por_attack_cat": {
+    "Analysis": {
+      "filas": 677,
+      "proporcion_predicha_ataque": 0.9513
+    },
+    "Backdoor": {
+      "filas": 583,
+      "proporcion_predicha_ataque": 1.0
+    },
+    "DoS": {
+      "filas": 4089,
+      "proporcion_predicha_ataque": 0.9976
+    },
+    "Exploits": {
+      "filas": 11132,
+      "proporcion_predicha_ataque": 0.9898
+    },
+    "Fuzzers": {
+      "filas": 6062,
+      "proporcion_predicha_ataque": 0.7902
+    },
+    "Generic": {
+      "filas": 18871,
+      "proporcion_predicha_ataque": 0.9998
+    },
+    "Normal": {
+      "filas": 37000,
+      "proporcion_predicha_ataque": 0.1754
+    },
+    "Reconnaissance": {
+      "filas": 3496,
+      "proporcion_predicha_ataque": 0.9977
+    },
+    "Shellcode": {
+      "filas": 378,
+      "proporcion_predicha_ataque": 0.9815
+    },
+    "Worms": {
+      "filas": 44,
+      "proporcion_predicha_ataque": 1.0
+    }
+  },
+  "predicciones": {
+    "archivo": "evidencias/predicciones-test.csv",
+    "sha256": "6f85c923c5881950e9ca2c03865f911bc42d3dd9d8699043abc4c88bf19e51f9",
+    "columnas": "row_id (test:<id del CSV>), y_true, score_attack, y_pred",
+    "regla": "y_pred = 1 si score_attack >= umbral"
+  },
+  "commit_congelacion_seleccion": "283a9eb680cdee4d4f1bbe3c35e3d38942601428",
+  "commit_codigo_evaluacion": "174ab8e556237db90d98a09cbd8b587187e7855b",
+  "fecha_evaluacion_utc": "2026-10-30T16:53:50Z",
+  "evaluaciones_previas_en_test": 0
+}
