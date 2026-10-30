@@ -1,0 +1,21 @@
+{
+  "version": "v2",
+  "mlflow_run_id": "68d9aeb74e0d402d9209c10ca1a735da",
+  "validacion": {
+    "umbral": 0.66,
+    "matriz_confusion": {
+      "tn": 10662,
+      "fp": 538,
+      "fn": 1117,
+      "tp": 22750
+    },
+    "recall_ataque": 0.9531989776679096,
+    "precision_ataque": 0.9768979732050842,
+    "fpr": 0.048035714285714286,
+    "macro_f1": 0.9464403491611462,
+    "f1_ataque": 0.9649029795355741,
+    "f1_normal": 0.9279777187867183,
+    "accuracy": 0.952804631134685,
+    "denominadores_cero": []
+  }
+}
