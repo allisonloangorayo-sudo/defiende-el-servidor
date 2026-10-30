@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "filas": 20,
+  "row_id_coinciden": true,
+  "entradas_dvc_coinciden_con_guardadas": true,
+  "sha256_model_joblib_descargado": "36648d8096669151f881ffa0d00f32b07daab389cd8927b0898d4fe81a33a7f3",
+  "sha256_model_joblib_esperado": "36648d8096669151f881ffa0d00f32b07daab389cd8927b0898d4fe81a33a7f3",
+  "umbral": 0.5,
+  "mlflow_run_id": "48de31fc1e57432194b41f4bc9e4a3a5",
+  "y_pred_coinciden": 20,
+  "max_abs_diff_score": 2.220446049250313e-16,
+  "tolerancia": 1e-09,
+  "predicciones_ataque": 11,
+  "sha256_coincide": true,
+  "resultado": "OK"
+}

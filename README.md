@@ -55,7 +55,7 @@ distribuye distinto; se reporta sin modificar modelo ni umbral (ver `informe.pdf
 │   ├── exportar_mlflow.py · registrar_referencias.py · publicar_hf.py · informe.py
 │   └── config.py · utils.py · metricas.py
 ├── models/v1 · models/v2          model card, config, predict.py (el binario se publica en HF)
-├── scripts/publicar.sh · recuperar.sh · empaquetar_entrega.sh
+├── scripts/publicar.sh · recuperar.sh · cerrar_entrega.sh
 └── evidencias/                    auditoria.json, experimentos.csv, seleccion.json,
                                    metricas-test.json, predicciones-test.csv, mlflow/,
                                    recuperacion/, figuras/
