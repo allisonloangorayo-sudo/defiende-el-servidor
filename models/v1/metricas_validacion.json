@@ -1,0 +1,21 @@
+{
+  "version": "v1",
+  "mlflow_run_id": "48de31fc1e57432194b41f4bc9e4a3a5",
+  "validacion": {
+    "umbral": 0.5,
+    "matriz_confusion": {
+      "tn": 9234,
+      "fp": 1966,
+      "fn": 296,
+      "tp": 23571
+    },
+    "recall_ataque": 0.9875979385762769,
+    "precision_ataque": 0.9230136664447665,
+    "fpr": 0.1755357142857143,
+    "macro_f1": 0.9225485061235279,
+    "f1_ataque": 0.9542142336652902,
+    "f1_normal": 0.8908827785817656,
+    "accuracy": 0.9354949097442039,
+    "denominadores_cero": []
+  }
+}
